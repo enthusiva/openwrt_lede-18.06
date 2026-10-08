@@ -1,4 +1,4 @@
 #!/bin/sh
 
-echo "none" > /sys/class/leds/dragino2:red:system/trigger
+echo "none" > /sys/class/leds/enthutech2:red:system/trigger
 

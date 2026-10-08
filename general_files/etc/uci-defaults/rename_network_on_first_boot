@@ -29,6 +29,6 @@ EOF
 
 sed "s/cid ' '/cid '$hostname'/g" /etc/config/mqtt -i
 [ -f /usr/lib/opkg/info/haserl-ui.prerm ] && echo "#!/bin/sh" > /usr/lib/opkg/info/haserl-ui.prerm
-[ -f /usr/lib/opkg/info/dragino_gw_fwd.prerm ] && echo "#!/bin/sh" > /usr/lib/opkg/info/dragino_gw_fwd.prerm
+[ -f /usr/lib/opkg/info/enthutech_gw_fwd.prerm ] && echo "#!/bin/sh" > /usr/lib/opkg/info/enthutech_gw_fwd.prerm
 
 exit 0

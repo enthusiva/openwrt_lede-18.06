@@ -5,7 +5,7 @@
 USB_INFO="/etc/cellular/usb-cellular-info"
 
 #If the wan port is not set to USB modem,exit
-[ "`uci get secn.wan.wanport`" != "USB-Modem" ] && logger "dragino:wan not set to cellular" && exit 0
+[ "`uci get secn.wan.wanport`" != "USB-Modem" ] && logger "enthutech:wan not set to cellular" && exit 0
 
 #Get Current PID and VID
 vidpid=`lsusb | awk '{print $6}'`
@@ -18,7 +18,7 @@ do
 done
 
 #can't find match modem, exit
-[ -z "$cellular_info" ] && logger "dragino: no match cellular" && exit 0
+[ -z "$cellular_info" ] && logger "enthutech: no match cellular" && exit 0
 
 vid=`echo ${cellular_info}|awk -F '[:|=|,]' '{print $1}'`
 pid=`echo ${cellular_info}|awk -F '[:|=|,]' '{print $2}'`

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Set up build environment for Dragino v2. Only need to run once on first compile. 
+#Set up build environment for Enthutech v2. Only need to run once on first compile. 
 
 OPENWRT_PATH=openwrt
 
@@ -33,8 +33,8 @@ cd $REPO_PATH
 echo "*** Backup original feeds files if they exist"
 [ -f $OPENWRT_PATH/feeds.conf.default ] &&  mv $OPENWRT_PATH/feeds.conf.default $OPENWRT_PATH/feeds.conf.default.bak
 
-echo "*** Copy feeds used in Dragino"
-cp feeds.dragino $OPENWRT_PATH/feeds.conf.default
+echo "*** Copy feeds used in Enthutech"
+cp feeds.enthutech $OPENWRT_PATH/feeds.conf.default
 
 echo " "
 echo "*** Update the feeds (See ./feeds-update.log)"
@@ -44,9 +44,9 @@ sleep 2
 echo " "
 
 #Add new fwd packages
-# No need this step, already include in feeds/dragino
-#git clone -b lgw-7.0-dev https://github.com/dragino/dragino-packages dragino-packages-lgw-7.0
-#cp -r dragino-packages-lgw-6.0/dragino-gw-fwd $OPENWRT_PATH/feeds/dragino/
+# No need this step, already include in feeds/enthutech
+#git clone -b lgw-7.0-dev https://github.com/enthusiva/enthutech-packages enthutech-packages-lgw-7.0
+#cp -r enthutech-packages-lgw-6.0/enthutech-gw-fwd $OPENWRT_PATH/feeds/enthutech/
 
 echo "*** Install OpenWrt extra packages"
 sleep 2
@@ -54,7 +54,7 @@ $OPENWRT_PATH/scripts/feeds install -a
 echo " "
 
 #echo ""
-#echo "Patch Dragino2 Platform"
+#echo "Patch Enthutech2 Platform"
 #rsync -avC platform/target/ $OPENWRT_PATH/target/
 
 

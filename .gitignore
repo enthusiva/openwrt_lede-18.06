@@ -8,5 +8,5 @@ openwrt/.config
 openwrt/.config.old
 openwrt/logs
 openwrt/files
-openwrt/package/feeds/dragino
+openwrt/package/feeds/enthutech
 openwrt/build.log

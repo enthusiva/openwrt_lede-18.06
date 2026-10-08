@@ -45,11 +45,11 @@ CONFIG_TARGET_ar71xx_generic=y
 # CONFIG_TARGET_ar71xx_nand is not set
 # CONFIG_TARGET_ar71xx_mikrotik is not set
 # CONFIG_TARGET_ar71xx_generic_Default is not set
-CONFIG_TARGET_ar71xx_generic_DRAGINO2=y
+CONFIG_TARGET_ar71xx_generic_ENTHUTECH2=y
 CONFIG_HAS_SUBTARGETS=y
 CONFIG_TARGET_BOARD="ar71xx"
 CONFIG_TARGET_SUBTARGET="generic"
-CONFIG_TARGET_PROFILE="DRAGINO2"
+CONFIG_TARGET_PROFILE="ENTHUTECH2"
 CONFIG_TARGET_ARCH_PACKAGES="mips_24kc"
 CONFIG_DEFAULT_TARGET_OPTIMIZATION="-Os -pipe -mno-branch-likely -mips32r2 -mtune=24kc"
 CONFIG_CPU_TYPE="24kc"
@@ -300,7 +300,7 @@ CONFIG_PER_FEED_REPO_ADD_COMMENTED=y
 # CONFIG_FEED_packages is not set
 # CONFIG_FEED_routing is not set
 # CONFIG_FEED_telephony is not set
-CONFIG_FEED_dragino=y
+CONFIG_FEED_enthutech=y
 CONFIG_FEED_luci=y
 
 #
@@ -5579,9 +5579,9 @@ CONFIG_PACKAGE_dbus=y
 # CONFIG_PACKAGE_digitemp-usb is not set
 # CONFIG_PACKAGE_dmesg is not set
 # CONFIG_PACKAGE_domoticz is not set
-# CONFIG_PACKAGE_dragino2 is not set
-CONFIG_PACKAGE_dragino_gw_fwd=y
-CONFIG_PACKAGE_dragino_lorawan_server=y
+# CONFIG_PACKAGE_enthutech2 is not set
+CONFIG_PACKAGE_enthutech_gw_fwd=y
+CONFIG_PACKAGE_enthutech_lorawan_server=y
 # CONFIG_PACKAGE_dropbearconvert is not set
 # CONFIG_PACKAGE_dtc is not set
 # CONFIG_PACKAGE_dump1090 is not set

@@ -1,7 +1,7 @@
-IoT Build for Dragino Devices -- Base on OpenWrt LEDE-18.06
+IoT Build for Enthutech Devices -- Base on OpenWrt LEDE-18.06
 ===============
-This repository is a generic OpenWrt version from Dragino devices such as:
-[MS14](http://www.dragino.com/products/mother-board.html), [HE](http://www.dragino.com/products/linux-module/item/87-he.html),[LG-1N](http://www.dragino.com/products/lora/item/143-lg01n.html),[OLG01-N](http://www.dragino.com/products/lora/item/144-olg01n.html),[LG02](http://www.dragino.com/products/lora/item/135-lg02.html),[OLG02](http://www.dragino.com/products/lora/item/136-olg02.html),[LG308](http://www.dragino.com/products/lora/item/140-lg308.html).
+This repository is a generic OpenWrt version from Enthutech devices such as:
+[MS14](http://www.enthutechaiot.com/products/mother-board.html), [HE](http://www.enthutechaiot.com/products/linux-module/item/87-he.html),[LG-1N](http://www.enthutechaiot.com/products/lora/item/143-lg01n.html),[OLG01-N](http://www.enthutechaiot.com/products/lora/item/144-olg01n.html),[LG02](http://www.enthutechaiot.com/products/lora/item/135-lg02.html),[OLG02](http://www.enthutechaiot.com/products/lora/item/136-olg02.html),[LG308](http://www.enthutechaiot.com/products/lora/item/140-lg308.html).
 
 <!-- TOC depthFrom:1 -->
  - [How to compile the firmware?](#how-to-compile-the-firmware)
@@ -11,10 +11,10 @@ This repository is a generic OpenWrt version from Dragino devices such as:
 
 ## How to compile the firmware
 
-### Method 1 Dragino SDK
+### Method 1 Enthutech SDK
 ``` bash
-git clone https://github.com/dragino/openwrt_lede-18.06 dragino-lede-18.06
-cd dragino-lede-18.06
+git clone https://github.com/enthusiva/openwrt_lede-18.06 enthutech-lede-18.06
+cd enthutech-lede-18.06
 ./set_up_build_environment.sh
 #build default IoT App on openwrt directory
 ./build_image.sh
@@ -22,9 +22,9 @@ cd dragino-lede-18.06
 
 After complination, the images can be found on **openwrt_lede-18.06/image** folder. The folder includes:
 
-- dragino-xxx--vxxxx-kernel.bin kernel files, for upgrade in u-boot
-- dragino-xxx--vxxxx-rootfs-squashfs.bin rootfs file, for upgrade in u-boot
-- dragino-xxx--vxxxx-squashfs-sysupgrade.bin sysupgrade file, used for web-ui upgrade
+- enthutech-xxx--vxxxx-kernel.bin kernel files, for upgrade in u-boot
+- enthutech-xxx--vxxxx-rootfs-squashfs.bin rootfs file, for upgrade in u-boot
+- enthutech-xxx--vxxxx-squashfs-sysupgrade.bin sysupgrade file, used for web-ui upgrade
 - md5sum md5sum for above files
 
 More build option can be viewed by running:
@@ -38,27 +38,27 @@ How to debug if build fails?
 ```
 Above commands will enable verbose and build in single thread to get a view of the error during build.
 
-### Method 2 Dragino Docker images
+### Method 2 Enthutech Docker images
 1. Pull `images`
 ``` bash
-docker pull ghcr.io/mikayong/dragino-gw-os/dragino-wrt-env:latest
+docker pull ghcr.io/mikayong/enthutech-gw-os/enthutech-wrt-env:latest
 ```
 3. Run `container`
 ``` bash
 docker run \
     -itd \
-    --name dragino-wrt-env \
-    -h Dragino \
+    --name enthutech-wrt-env \
+    -h Enthutech \
     -p 10022:22 \
-    ghcr.io/mikayong/dragino-gw-os/dragino-wrt-env:latest
+    ghcr.io/mikayong/enthutech-gw-os/enthutech-wrt-env:latest
 ```
 5. Enter `container`
 ``` bash
-docker exec -it dragino-wrt-env /bin/bash
+docker exec -it enthutech-wrt-env /bin/bash
 ```
 7.  Build `OpenWRT-lede-18.06`
 ``` bash
-cd /root/dragino-wrt-build
+cd /root/enthutech-wrt-build
 ./build_image.sh
 ```
 
@@ -66,8 +66,8 @@ cd /root/dragino-wrt-build
 ## How to compile the firmware
 
 ``` bash
-git clone https://github.com/dragino/openwrt_lede-18.06 dragino-lede-18.06
-cd dragino-lede-18.06
+git clone https://github.com/enthusiva/openwrt_lede-18.06 enthutech-lede-18.06
+cd enthutech-lede-18.06
 ./set_up_build_environment.sh
 #build default IoT App on openwrt directory
 ./build_image.sh
@@ -75,9 +75,9 @@ cd dragino-lede-18.06
 
 After complination, the images can be found on **openwrt_lede-18.06/image** folder. The folder includes:
 
-- dragino-xxx--vxxxx-kernel.bin kernel files, for upgrade in u-boot
-- dragino-xxx--vxxxx-rootfs-squashfs.bin rootfs file, for upgrade in u-boot
-- dragino-xxx--vxxxx-squashfs-sysupgrade.bin sysupgrade file, used for web-ui upgrade
+- enthutech-xxx--vxxxx-kernel.bin kernel files, for upgrade in u-boot
+- enthutech-xxx--vxxxx-rootfs-squashfs.bin rootfs file, for upgrade in u-boot
+- enthutech-xxx--vxxxx-squashfs-sysupgrade.bin sysupgrade file, used for web-ui upgrade
 - md5sum md5sum for above files
 
 More build option can be viewed by running:
@@ -121,16 +121,16 @@ The build process will auto overwrite the default files or pacakges with the cus
 ## How to develop a C software before build the image
 The fastest way is to use the SDK. 
 
-### Download the [LEDE-SDK](http://www.dragino.com/downloads/downloads/LoRa_Gateway/LG02-OLG02/openwrt-sdk-8-29-Linux-x86_64.tar.bz2) 
+### Download the [LEDE-SDK](http://www.enthutechaiot.com/downloads/downloads/LoRa_Gateway/LG02-OLG02/openwrt-sdk-8-29-Linux-x86_64.tar.bz2) 
 ``` bash
-   wget http://www.dragino.com/downloads/downloads/LoRa_Gateway/LG02-OLG02/openwrt-sdk-8-29-Linux-x86_64.tar.bz2
+   wget http://www.enthutechaiot.com/downloads/downloads/LoRa_Gateway/LG02-OLG02/openwrt-sdk-8-29-Linux-x86_64.tar.bz2
 ```
 
 ### Extra the SDK to Linux OS. 
 ``` bash
    tar -xjvf openwrt-sdk-8-29-Linux-x86_64.tar.bz2
 ```
-### Download the demo [hello package](http://www.dragino.com/downloads/downloads/LoRa_Gateway/LG02-OLG02/hello.tgz) and put it in the lede-sdk/package/
+### Download the demo [hello package](http://www.enthutechaiot.com/downloads/downloads/LoRa_Gateway/LG02-OLG02/hello.tgz) and put it in the lede-sdk/package/
 
 ### Enable hello package by running make menuconfig in lede-sdk. and enable hello package in the utility
 ``` bash
@@ -138,7 +138,7 @@ The fastest way is to use the SDK.
 ```
 ### make the package 
 ``` bash
-[root@dragino lede-sdk]# make
+[root@enthutech lede-sdk]# make
   WARNING: Makefile 'package/linux/Makefile' has a dependency on 'r8169-firmware', which does not exist
   WARNING: Makefile 'package/linux/Makefile' has a dependency on 'e100-firmware', which does not exist
   WARNING: Makefile 'package/linux/Makefile' has a dependency on 'bnx2-firmware', which does not exist
@@ -170,12 +170,12 @@ The fastest way is to use the SDK.
 ### get the execute file and test
 The hello package (hello_1.0.0-1_mips_24kc.ipk) is under the bin/packages/mips_24kc/base/ , user can upload this package to the device and install / run it: 
 ``` bash
-root@dragino-1b6fb0:~# opkg install hello_1.0.0-1_mips_24kc.ipk 
+root@enthutech-1b6fb0:~# opkg install hello_1.0.0-1_mips_24kc.ipk 
 Installing hello (1.0.0-1) to root...
 Configuring hello.
-root@dragino-1b6fb0:~# hello 
+root@enthutech-1b6fb0:~# hello 
 Hello world
-root@dragino-1b6fb0:~# 
+root@enthutech-1b6fb0:~# 
 ```
 
 ### make it faster:
@@ -194,7 +194,7 @@ upload_lora_bin.sh
 Run it 
 
 ``` bash
-root@dragino-1b6fb0:~# ./update_lora_bin.sh 
+root@enthutech-1b6fb0:~# ./update_lora_bin.sh 
 Removing package hello from root...
 
 Host '120.78.xxx.xxx' is not in the trusted hosts file.
@@ -204,13 +204,13 @@ root@120.78.xxx.xxx's password:
 hello_1.0.0-1_mips_24kc.ipk                100% 1906     1.9KB/s   00:00    
 Installing hello (1.0.0-1) to root...
 Configuring hello.
-root@dragino-1b6fb0:~#
+root@enthutech-1b6fb0:~#
 ```
 
 ### Useful Packages
 Below is the LoRa Control packages used in LG01-N, LG02,LG308,LPS8, DLOS8
-- [lg01n,lg02_lora_control](https://github.com/dragino/dragino-packages/tree/lg02/lg02-pkt-fwd)
-- [lg308，lps8, dlos8 lora control](https://github.com/dragino/dragino-packages/tree/lg02/lora-gateway)
+- [lg01n,lg02_lora_control](https://github.com/enthusiva/enthutech-packages/tree/lg02/lg02-pkt-fwd)
+- [lg308，lps8, dlos8 lora control](https://github.com/enthusiva/enthutech-packages/tree/lg02/lora-gateway)
 
 A video instruction can be seen from [LEDE SDK Video](https://youtu.be/SVtAVF93cpw)
 
@@ -220,5 +220,5 @@ If fail to download by build_image.sh, developer can download from web and put t
 
 Have Fun!
 
-Dragino Technology
+Enthutech Technology
 

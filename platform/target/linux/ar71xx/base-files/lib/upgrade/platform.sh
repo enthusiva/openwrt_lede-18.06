@@ -174,8 +174,8 @@ platform_check_image() {
 	dir-615-e4 | \
 	dir-825-c1 | \
 	dir-835-a1 | \
-	dragino2 | \
-	dragino2_siod | \
+	enthutech2 | \
+	enthutech2_siod | \
 	esr1750 | \
 	esr900 | \
 	ew-dorin | \

@@ -33,7 +33,7 @@
 
 	local has_dsl = fs.access("/etc/init.d/dsl_control")
 	
-	local utility = require "dragino.utility"
+	local utility = require "enthutech.utility"
 	local firmwre_version,build_time,model = utility.getVersion() 
 	local ICCID,IMEI,IMSI,operator,tech_type,reg_status,band,sig_Q = utility.getCellularInfo()
 	

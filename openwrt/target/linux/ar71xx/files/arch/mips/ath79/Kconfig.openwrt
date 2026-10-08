@@ -679,8 +679,8 @@ config ATH79_MACH_DR531
 	select ATH79_DEV_USB
 	select ATH79_DEV_WMAC
 
-config ATH79_MACH_DRAGINO2
-	bool "DRAGINO V2 support"
+config ATH79_MACH_ENTHUTECH2
+	bool "ENTHUTECH V2 support"
 	select SOC_AR933X
 	select ATH79_DEV_M25P80
 	select ATH79_DEV_GPIO_BUTTONS

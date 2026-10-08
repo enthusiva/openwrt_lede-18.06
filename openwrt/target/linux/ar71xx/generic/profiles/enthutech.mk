@@ -5,13 +5,13 @@
 # See /LICENSE for more information.
 #
 
-define Profile/DRAGINO2
-	NAME:=DRAGINO2
+define Profile/ENTHUTECH2
+	NAME:=ENTHUTECH2
 	PACKAGES:=kmod-ath9k kmod-usb-core kmod-usb-ohci kmod-usb2 kmod-ledtrig-usbdev
 endef
 
-define Profile/DRAGINO2/Description
-	Package set optimized for the DRAGINO v2.
+define Profile/ENTHUTECH2/Description
+	Package set optimized for the ENTHUTECH v2.
 endef
 
-$(eval $(call Profile,DRAGINO2))
+$(eval $(call Profile,ENTHUTECH2))

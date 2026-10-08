@@ -201,7 +201,7 @@ get_status_led() {
 	dr531)
 		status_led="$board:green:sig4"
 		;;
-	dragino2|\
+	enthutech2|\
 	oolite-v1)
 		status_led="$board:red:system"
 		;;

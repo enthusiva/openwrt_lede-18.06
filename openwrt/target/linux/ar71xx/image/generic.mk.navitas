@@ -304,15 +304,15 @@ define Device/cpe870
 endef
 TARGET_DEVICES += cpe870
 
-define Device/dragino2
-  BOARDNAME := DRAGINO2
+define Device/enthutech2
+  BOARDNAME := ENTHUTECH2
   CONSOLE =
   DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
-  DEVICE_TITLE := Dragino 2 (MS14)
+  DEVICE_TITLE := Enthutech 2 (MS14)
   IMAGE_SIZE := 16000k
   MTDPARTS := spi0.0:256k(u-boot)ro,16000k(firmware),64k(config)ro,64k(art)ro
 endef
-TARGET_DEVICES += dragino2
+TARGET_DEVICES += enthutech2
 
 define Device/e1700ac-v2-16M
   DEVICE_TITLE := Qxwlan E1700AC v2 (16MB flash)

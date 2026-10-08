@@ -319,11 +319,11 @@ ar71xx_board_detect() {
 	*"DIR-835 rev. A1")
 		name="dir-835-a1"
 		;;
-	*"Dragino v2")
-		name="dragino2"
+	*"Enthutech v2")
+		name="enthutech2"
 		;;
-	*"Dragino v2 SIOD")
-		name="dragino2_siod"
+	*"Enthutech v2 SIOD")
+		name="enthutech2_siod"
 		;;
 	*"EAP300 v2")
 		name="eap300v2"

@@ -1,6 +1,6 @@
 config system
 	option timezone 'UTC'
-	option hostname 'dragino2'
+	option hostname 'enthutech2'
 	option firstboot '1'
 	option debug_inet '0'
 	option provision_server 'eth1_net'
@@ -24,28 +24,28 @@ config restorefactory
 
 config led 'led_wlan'
         option name 'WLAN'
-        option sysfs 'dragino2:red:wlan'
+        option sysfs 'enthutech2:red:wlan'
         option trigger 'phy0tpt'
 
 config oem 'vendor'
-	option name 'dragino'
-	option ssid_prefix 'dragino'
-	option hostname 'dragino'
-	option web_model 'dragino'
-	option company_name 'DRAGINO TECHNOLOGY CO., LIMITED'
-	option company_url 'http://www.dragino.com'
-	option mail_domain "dragino.com"
+	option name 'enthutech'
+	option ssid_prefix 'enthutech'
+	option hostname 'enthutech'
+	option web_model 'enthutech'
+	option company_name 'ENTHUTECH TECHNOLOGY CO., LIMITED'
+	option company_url 'http://www.enthutechaiot.com'
+	option mail_domain "enthutechaiot.com"
 
 config led 'led_lan'
         option name 'LAN'
-        option sysfs 'dragino2:red:lan'
+        option sysfs 'enthutech2:red:lan'
         option trigger 'netdev'
         option dev 'eth0'
         option mode 'link tx rx'
 
 config led 'led_wan'
         option name 'WAN'
-        option sysfs 'dragino2:red:wan'
+        option sysfs 'enthutech2:red:wan'
         option trigger 'netdev'
         option dev 'eth1'
         option mode 'link tx rx'

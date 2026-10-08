@@ -35,7 +35,7 @@ start()
 		fi
 	fi
 
-	[ -f /usr/lib/opkg/info/dragino_gw_fwd.prerm ] && echo "#!/bin/sh" > /usr/lib/opkg/info/dragino_gw_fwd.prerm
+	[ -f /usr/lib/opkg/info/enthutech_gw_fwd.prerm ] && echo "#!/bin/sh" > /usr/lib/opkg/info/enthutech_gw_fwd.prerm
 	[ -f /usr/lib/opkg/info/haserl-ui.prerm ] && echo "#!/bin/sh" > /usr/lib/opkg/info/haserl-ui.prerm
 
 	exit

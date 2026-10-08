@@ -8,12 +8,12 @@ do
 	if [ -f "/etc/init.d/globacom" ]; then
 		exit 0
 	else
-		echo 0 > /sys/devices/platform/leds-gpio/leds/dragino2:red:system/brightness
+		echo 0 > /sys/devices/platform/leds-gpio/leds/enthutech2:red:system/brightness
 		if [ ! -z "`fping -e $host | grep alive`" ]; then
-			echo 1 > /sys/devices/platform/leds-gpio/leds/dragino2:red:system/brightness
+			echo 1 > /sys/devices/platform/leds-gpio/leds/enthutech2:red:system/brightness
 		fi
 		sleep 1
-		echo 0 > /sys/devices/platform/leds-gpio/leds/dragino2:red:system/brightness  
+		echo 0 > /sys/devices/platform/leds-gpio/leds/enthutech2:red:system/brightness  
 		sleep 1
 	fi
 done

@@ -60,7 +60,7 @@ config settings 'general'
 	option fake_gps '0'
 	option gwcfg 'EU'
 	option station_server_provider 'TTN'
-	option email 'dragino-21de8c@dragino.com'
+	option email 'enthutech-21de8c@enthutechaiot.com'
 	option GWID 'a84041ffff21de8c'
 	option awsgwid 'a84041fffe21de8f'
 

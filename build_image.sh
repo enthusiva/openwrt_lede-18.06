@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#Build Arduino Yun Image for Dragino2. MS14, HE. 
+#Build Arduino Yun Image for Enthutech2. MS14, HE. 
 
 SFLAG=
 AFLAG=
@@ -35,10 +35,10 @@ do
 	s)	SFLAG=1
 		;;
 
-	h|?)	printf "Build Image for Dragino MS14, HE, LG02, OLG02 \n\n"
+	h|?)	printf "Build Image for Enthutech MS14, HE, LG02, OLG02 \n\n"
 		printf "Usage: %s [-p <openwrt_source_path>] [-a <application>]  [-v <version>] [-s] \n" $(basename $0) >&2
 		printf "	-p: openwrt source path, default: barrier_breaker\n"
-		printf "	-a: application default: Dragino_Yun\n"
+		printf "	-a: application default: Enthutech_Yun\n"
 		printf "	-v: specify firmware version\n"
 		printf "	-s: build in singe thread\n"
 		printf "\n"
@@ -55,7 +55,7 @@ BUILD=$APP-$VERSION
 BUILD_TIME="`date`"
 ARCH="ar71xx"
 
-file_prefix="openwrt-ar71xx-generic-dragino2"
+file_prefix="openwrt-ar71xx-generic-enthutech2"
 
 target_path="bin/targets/ar71xx/generic"
 
@@ -98,7 +98,7 @@ cp -r general_files $OPENWRT_PATH/files
 echo "***.config.$APP to OpenWrt/.config***"
 cp .config.$APP $OPENWRT_PATH/.config
 
-#cd $OPENWRT_PATH/feeds/dragino
+#cd $OPENWRT_PATH/feeds/enthutech
 
 #git pull 
 
@@ -190,13 +190,13 @@ IMAGE_DIR=$REPO_PATH/image/$APP-$APP2-build-v$VERSION-$DATE
 
 echo ""
 echo  "***Move files to ./image/$APP-$APP2-build--v$VERSION--$DATE ***"
-cp ./$target_path/$file_prefix-kernel.bin     $IMAGE_DIR/dragino-$APP-$APP2-v$VERSION-kernel.bin
-cp ./$target_path/$file_prefix-rootfs-squashfs.bin   $IMAGE_DIR/dragino-$APP-$APP2-v$VERSION-rootfs-squashfs.bin
-cp ./$target_path/$file_prefix-squashfs-sysupgrade.bin $IMAGE_DIR/dragino-$APP-$APP2-v$VERSION-squashfs-sysupgrade.bin
+cp ./$target_path/$file_prefix-kernel.bin     $IMAGE_DIR/enthutech-$APP-$APP2-v$VERSION-kernel.bin
+cp ./$target_path/$file_prefix-rootfs-squashfs.bin   $IMAGE_DIR/enthutech-$APP-$APP2-v$VERSION-rootfs-squashfs.bin
+cp ./$target_path/$file_prefix-squashfs-sysupgrade.bin $IMAGE_DIR/enthutech-$APP-$APP2-v$VERSION-squashfs-sysupgrade.bin
 
 echo ""
 echo "***Update md5sums***"
-cat ./$target_path/sha256sums | grep "dragino2" | awk '{gsub(/'"$file_prefix"'/,"dragino-'"$APP"'-'"$APP2"'-v'"$VERSION"'-")}{print}' >> $IMAGE_DIR/sha256sums 
+cat ./$target_path/sha256sums | grep "enthutech2" | awk '{gsub(/'"$file_prefix"'/,"enthutech-'"$APP"'-'"$APP2"'-v'"$VERSION"'-")}{print}' >> $IMAGE_DIR/sha256sums 
 
 echo ""
 echo "***Back Up Custom Config to Image DIR***"
@@ -212,5 +212,5 @@ rm -rf custom_config
 cd $REPO_PATH
 
 echo ""
-echo "End Dragino build, The image can be found at $IMAGE_DIR"
+echo "End Enthutech build, The image can be found at $IMAGE_DIR"
 echo ""

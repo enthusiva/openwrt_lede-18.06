@@ -21,7 +21,7 @@ config wifi-iface 'ap_0'
 	option maxassoc '30'
 	option disabled '0'
 	option encryption 'psk2'
-	option key 'dragino+dragino'
+	option key 'enthutech+enthutech'
 
 config wifi-iface 'sta_0'
 	option device 'radio0'

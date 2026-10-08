@@ -103,7 +103,7 @@ enum ath79_mach_type {
 	ATH79_MACH_DR342,			/* Wallys DR342 */
 	ATH79_MACH_DR344,			/* Wallys DR344 */
 	ATH79_MACH_DR531,			/* Wallys DR531 */
-	ATH79_MACH_DRAGINO2,			/* Dragino Version 2 */
+	ATH79_MACH_ENTHUTECH2,			/* Enthutech Version 2 */
 	ATH79_MACH_E1700AC_V2,			/* Qxwlan E1700AC v2 */
 	ATH79_MACH_E600G_V2,			/* Qxwlan E600G v2 */
 	ATH79_MACH_E600GAC_V2,			/* Qxwlan E600GAC v2 */

@@ -2,9 +2,9 @@
 
 is_siod=`cat /etc/banner | grep 'SIOD' -c`
 
-LED="dragino2:red:system"
+LED="enthutech2:red:system"
 if [ $is_siod -gt 0 ];then
-	LED="dragino2:red:wan"
+	LED="enthutech2:red:wan"
 	echo $is_siod
 fi
 
